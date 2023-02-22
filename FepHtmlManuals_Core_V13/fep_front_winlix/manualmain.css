@@ -1,13 +1,20 @@
 /* (Marcelo 02-12-20) Modified by FAST */
 @charset "utf-8";
+@font-face {
+ font-family: FujitsuInfinityPro;
+  font-display:block;
+  src: url('https://www.postgresql.fastware.com/hubfs/_Global/Fonts/FujitsuInfinityPro-Regular.woff2') format("woff2"),
+       url('https://www.postgresql.fastware.com/hubfs/_Global/Fonts/FujitsuInfinityPro-Regular.woff') format("woff");
+  font-weight:400
+}
 div.topButton { position: absolute; left: -300px; top: -300px; }
-body { background-color: #FFFFFF; margin: 0px 0px 0px 20px; padding: 0px; font-family: Fujitsu Sans,Arial,Osaka,sans-serif; font-style: 9pt; color: #000000; }
+body { background-color: #FFFFFF; margin: 0px 0px 0px 20px; padding: 0px; font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; font-style: 9pt; color: #000000; }
 .header_footer { margin-left: 10px; margin-right: 10px; }
-.breadcrumbslist { margin-top:6px; font-family: Fujitsu Sans,Arial,Osaka,sans-serif; font-size: 80%; line-height: 1.2; color:#606060; }
+.breadcrumbslist { margin-top:6px; font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; font-size: 80%; line-height: 1.2; color:#606060; }
 .breadcrumbslist a:visited { color:#606060; }
 .back_next { text-align: right; border-top: solid 1px #D0D0D0; margin-top: 5px; padding-top: 5px; }
 .top { position:fixed; top:10px; text-align:right; }
-.copyright { font-size: 70%; font-family: Fujitsu Sans,Arial,Osaka,sans-serif; text-align: right; padding-bottom: 5px; }
+.copyright { font-size: 70%; font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; text-align: right; padding-bottom: 5px; }
 .top_header {
 display: none; }
 .p_top_header { background-image: url(image/p-cover-header-bg.gif); background-repeat: repeat-x; height: 90px; width: 100%; white-space: nowrap; }
@@ -15,8 +22,8 @@ display: none; }
 .top_header_graphic { vertical-align: middle; height: 32px; text-align: left; clear: right; float: none; margin: 0px; padding: 0px; white-space: nowrap; }
 .top_logo { float: left; margin: 0px; padding: 0px; white-space: nowrap; }
 .top_keygraphic { float: right; margin: 0px; white-space: nowrap; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; }
-.top_link { font-family: Fujitsu Sans,Arial,Osaka,sans-serif; font-style: normal; color: #A4312E; text-decoration: none; vertical-align: middle; }
-.body { font-family: Fujitsu Sans,Arial,Osaka,sans-serif; margin-left: 10px; margin-right: 20px; z-index:1; margin-bottom: 50px; }
+.top_link { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; font-style: normal; color: #A4312E; text-decoration: none; vertical-align: middle; }
+.body { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; margin-left: 10px; margin-right: 20px; z-index:1; margin-bottom: 50px; }
 DIV.body_contents { margin-left: 50px; margin-right: 10px; }
 .textblock{ margin-left: 10px; z-index:2 }
 p { line-height:120%; margin-top: 0.2em;   margin-bottom: 0.4em; }
@@ -24,7 +31,7 @@ li { line-height:100%;   margin-top: 0.1em;   margin-bottom: 0.1em;  }
 dd { line-height:100%;   margin-top: 0.1em;  margin-bottom: 0.1em;    }
 a:link { color: #A4312E; }
 a:visited { color: #C0392B; }
-H1, H2, H3, H4, H5 { font-family: Fujitsu Sans,Arial,Osaka,sans-serif; padding-right: 10px; margin-top: 2px; margin-bottom: 2px; }
+H1, H2, H3, H4, H5 { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; padding-right: 10px; margin-top: 2px; margin-bottom: 2px; }
 H1.front { font-size: 170%; line-height: 150%; }
 .textblock dt.em {font-weight: 500;  }
 H1.glossary { font-size: 170%; line-height: 150%; background-color: #99CCFF; }
