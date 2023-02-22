@@ -1,0 +1,24 @@
+/*@import url(//fonts.googleapis.com/icon?family=Material+Icons); /* Neumorphic - An import for use of Material icons */
+@charset "utf-8";
+a { text-decoration: none; font-family: Fujitsu Sans,Arial,Osaka,sans-serif !important; border: 0px; cursor: default; }
+body, p, h1, h2, h3, h4, td, div, input { font-family: Fujitsu Sans Light,Fujitsu Sans,Arial,Osaka,sans-serif !important;  margin: 0px; }
+h2        { color: #A30B1A; margin-bottom:5px; }
+h3        { font-size: 12pt; }
+a:link    { color: #175DB5;  }
+a:visited { color: #175DB5;  }
+a.
+img       { border-width: 0px; }
+
+.divContentsOrIndex { margin-top: 10px; margin-left: 10px; }
+.cellRowHeader {
+ color: #303030;
+ border-bottom: 1px solid #806B5A;
+ vertical-align: middle;
+}
+.cellRegular {
+ color: #303030;
+ border-bottom: 1px solid #806B5A;
+ vertical-align: middle;
+ padding:2px;
+}
+::selection {  background: transparent; }
