@@ -1,7 +1,15 @@
 /*@import url(//fonts.googleapis.com/icon?family=Material+Icons); /* Neumorphic - An import for use of Material icons */
 @charset "utf-8";
-a { text-decoration: none; font-family: Fujitsu Sans,Arial,Osaka,sans-serif !important; border: 0px; cursor: default; }
-body, p, h1, h2, h3, h4, td, div, input { font-family: Fujitsu Sans Light,Fujitsu Sans,Arial,Osaka,sans-serif !important;  margin: 0px; }
+@font-face {
+ font-family: FujitsuInfinityPro;
+  font-display:block;
+  src: url('https://www.postgresql.fastware.com/hubfs/_Global/Fonts/FujitsuInfinityPro-Regular.woff2') format("woff2"),
+       url('https://www.postgresql.fastware.com/hubfs/_Global/Fonts/FujitsuInfinityPro-Regular.woff') format("woff");
+  font-weight:400
+}
+
+a { text-decoration: none; font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif !important; border: 0px; cursor: default; }
+body, p, h1, h2, h3, h4, td, div, input { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif !important;  margin: 0px; }
 h2        { color: #A30B1A; margin-bottom:5px; }
 h3        { font-size: 12pt; }
 a:link    { color: #175DB5;  }
