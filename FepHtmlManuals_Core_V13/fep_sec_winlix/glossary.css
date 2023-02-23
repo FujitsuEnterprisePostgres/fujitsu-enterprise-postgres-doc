@@ -1,0 +1,57 @@
+﻿@charset "utf-8";
+
+
+.go_menu{
+	margin-top: 0px;
+	font-size: 90%;
+	text-align: right;
+}
+
+.go_top{
+	font-size: 90%;
+	padding-left: 5px;
+	text-align: left;
+	background-color: #FFFFFF;
+	font-family: Arial,Osaka,sans-serif;
+}
+
+h1.glossary_ix{
+	font-size: 140%;
+	font-weight: bold;
+	border-top: solid 2px;
+	border-bottom: solid 2px;
+	margin-top: 5px;
+	font-family: Arial,Osaka,sans-serif;
+}
+
+.glos_label {
+	font-size: 90%;
+	font-weight: bold;
+	color: #0066CC;
+	margin-top: 16px;
+	font-family: Arial,Osaka,sans-serif;
+}
+
+.glos_entry {
+	font-size: 90%;
+	font-weight: bold;
+	white-space: nowrap;
+	margin-top: 6px;
+	font-family: Arial,Osaka,sans-serif;
+}
+
+
+.glos_subhead {
+	font-size: 90%;
+	font-weight: bold;
+	white-space: nowrap;
+	font-family: Arial,Osaka,sans-serif;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: 4px;
+}
+
+.alow_top {
+	border:0px;
+	vertical-align:middle; 
+}
