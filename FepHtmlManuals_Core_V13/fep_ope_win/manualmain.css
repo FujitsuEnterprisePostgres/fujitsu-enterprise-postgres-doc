@@ -22,15 +22,15 @@ display: none; }
 .top_header_graphic { vertical-align: middle; height: 32px; text-align: left; clear: right; float: none; margin: 0px; padding: 0px; white-space: nowrap; }
 .top_logo { float: left; margin: 0px; padding: 0px; white-space: nowrap; }
 .top_keygraphic { float: right; margin: 0px; white-space: nowrap; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; }
-.top_link { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; font-style: normal; color: #A4312E; text-decoration: none; vertical-align: middle; }
+.top_link { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; font-style: normal; color: #EA0000; text-decoration: none; vertical-align: middle; }
 .body { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; margin-left: 10px; margin-right: 20px; z-index:1; margin-bottom: 50px; }
 DIV.body_contents { margin-left: 50px; margin-right: 10px; }
 .textblock{ margin-left: 10px; z-index:2 }
 p { line-height:120%; margin-top: 0.2em;   margin-bottom: 0.4em; }
 li { line-height:100%;   margin-top: 0.1em;   margin-bottom: 0.1em;  }
 dd { line-height:100%;   margin-top: 0.1em;  margin-bottom: 0.1em;    }
-a:link { color: #A4312E; }
-a:visited { color: #C0392B; }
+a:link { color: #EA0000; }
+a:visited { color: #EA0000; }
 H1, H2, H3, H4, H5 { font-family: 'FujitsuInfinityPro',Arial,Osaka,sans-serif; padding-right: 10px; margin-top: 2px; margin-bottom: 2px; }
 H1.front { font-size: 170%; line-height: 150%; }
 .textblock dt.em {font-weight: 500;  }
@@ -38,9 +38,9 @@ H1.glossary { font-size: 170%; line-height: 150%; background-color: #99CCFF; }
 H1.message { font-size: 170%; line-height: 150%; background-color: #99CCFF; }
 H1.part { font-size: 170%; line-height: 150%; background-color: #B1B1AC; }
 DIV.part_deco { }
-H1 { color: #A4312E; font-size: 150%; line-height: 150%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #A4312E; margin-bottom: 30px; }
-H2 { color: #A4312E; font-size: 140%; line-height: 120%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #A4312E; margin-bottom: 30px; }
-H3 { color: #a4312e; font-size: 120%; line-height: 170%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #A4312E; margin-bottom: 20px; }
+H1 { color: #EA0000; font-size: 150%; line-height: 150%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #EA0000; margin-bottom: 30px; }
+H2 { color: #EA0000; font-size: 140%; line-height: 120%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #EA0000; margin-bottom: 30px; }
+H3 { color: #EA0000; font-size: 120%; line-height: 170%; margin-left: 10px; font-weight: normal; border-bottom: 1px solid #a0a0a0; margin-bottom: 20px; }
 H4 {                 font-size: 120%;                    margin-left: 10px; font-weight: normal; margin-top: 10px; }
 H5 {                 font-size: 110%;                    margin-left: 10px; font-weight: normal; margin-top: 10px; }
 P.subhead_1, P.subhead_2, P.message, p.term { margin-left: 0px; }
@@ -48,8 +48,8 @@ P.subhead_1 {margin-top: 0.8em; color: #303030;font-weight: normal; }
 P.subhead_2 { font-weight: bold; font-size: 100%; }
 P.subhead_1 .em { font-weight: 500; }
 P.subhead_2 .em { font-weight: 500; }
-P.message { padding-top: 5px; margin-top: 0px; font-weight: bold; color: #a4312e; }
-p.term {padding-top: 5px;margin-top: 10px;/* border-top: solid 1px #ffffff; */font-weight: bold;color: #A4312E;}
+P.message { padding-top: 5px; margin-top: 0px; font-weight: bold; color: #EA0000; }
+p.term {padding-top: 5px;margin-top: 10px;/* border-top: solid 1px #ffffff; */font-weight: bold;color: #EA0000;}
 H1.app { }
 H1.glos { }
 H1.acron { }
@@ -58,14 +58,16 @@ UL { padding-left: 25px; }
 UL P, OL P { margin-left: 0px;  margin-top: 0px;  }
 LI P { margin-left: 0px;  margin-top: 0px;  }
 LI P ~ P { display: block; }
-UL    { list-style: url("../Misc/image/img-bullet-square-red.png");        }
-UL UL { list-style: url("../Misc/image/img-bullet-square-gray-small.png"); }
+UL    { list-style: disc; }
+UL UL { list-style: disc;}
+li::marker       { color: #EA0000; font-size: 160%; }
+UL UL li::marker       { color: #606060; font-size: 150%; }
 OL       { list-style: none; counter-reset: li }
 OL.alpha { list-style-type: lower-alpha; }
 UL li::before    { counter-increment: none !important; content: "" !important; } /* (Marcelo 04-07-20: IMPORTANT-  We need to set 'counter-increment: none' here so that <ul> inside <li> does not cause the counter to increment. See article06 (str-rep-ope) for an example */
 UL UL li::before { counter-increment: none !important; content: "" !important; } /* (Marcelo 04-07-20: IMPORTANT-  We need to set 'counter-increment: none' here so that <ul> inside <li> does not cause the counter to increment. See article06 (str-rep-ope) for an example */
-OL       LI::before { counter-increment: li; content: counter(li)"."; color: #A4312E; text-align: right;  display: inline-block; width: 1.0em; margin-right: 0.3em;  margin-left: -1.5em;  } 
-OL.alpha LI::before { content: ""; color: #A4312E; text-align: right;  display: inline-block; width: 1.0em; margin-right: 0.3em;  margin-left: -1.5em;  } 
+OL       LI::before { counter-increment: li; content: counter(li)"."; color: #EA0000; text-align: right;  display: inline-block; width: 1.0em; margin-right: 0.3em;  margin-left: -1.5em;  } 
+OL.alpha LI::before { content: ""; color: #EA0000; text-align: right;  display: inline-block; width: 1.0em; margin-right: 0.3em;  margin-left: -1.5em;  } 
 ol ol { padding-left: 20px; }
 LI P { display: inline;  }
 OL LI{ line-height:130%; margin-top: 0.2em;   margin-bottom: 0.4em;  }
@@ -91,11 +93,11 @@ caption { font-weight: bold; text-align: left; }
 table caption { font-weight: 100; font-size: 90%; }
 th { border-color: #000000; }
 td {  border-color: #000000;  }
-.body TH { background-color: #C0392B; color: #FFFFFF !important; padding: 4px; border: 1px solid #C0392B; font-size: 95%; font-weight: normal; vertical-align: middle; border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; }
+.body TH { background-color: #EA0000; color: #FFFFFF !important; padding: 4px; border: 1px solid #EA0000; font-size: 95%; font-weight: normal; vertical-align: middle; border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; }
 .body TH * {  color: #FFFFFF; }
-.body TH:last-child { border-right: 1px solid #C0392B; }
+.body TH:last-child { border-right: 1px solid #EA0000; }
 .body TH p { margin: 0px; }
-.body TD { padding: 4px; background: #F5F5F5; color: #303030 !important;  border: 1px solid #C0392B; font-size: 90%;  vertical-align: top;    }
+.body TD { padding: 4px; background: #FFFFFF; color: #303030 !important;  border: 0px; border-bottom: 1px solid #EA0000; font-size: 90%;  vertical-align: top;    }
 .body TD P{ }
 .body TABLE UL{ }
 .body TABLE OL{ }
@@ -195,17 +197,17 @@ SPAN.icon            { position:absolute; left:10px; }
 .iswje_spcl_cont     { background-color: #EEEEEE; }
 .issje_spcl_cont     { background-color: #EEEEEE; }
 .fj_spcl_cont        { background-color: #FFE8DB; }
-th .multi_spcl_cont     { background-color: #C0392B; }
-th .ge_spcl_cont        { background-color: #C0392B; }
-th .ee_spcl_cont        { background-color: #C0392B; }
-th .se_spcl_cont        { background-color: #C0392B; }
-th .sol_spcl_cont       { background-color: #C0392B; }
-th .lix_spcl_cont       { background-color: #C0392B; }
-th .win_spcl_cont       { background-color: #C0392B; }
-th .isee_spcl_cont      { background-color: #C0392B; }
-th .iswje_spcl_cont     { background-color: #C0392B; }
-th .issje_spcl_cont     { background-color: #C0392B; }
-th .fj_spcl_cont        { background-color: #C0392B; }
+th .multi_spcl_cont     { background-color: #EA0000; }
+th .ge_spcl_cont        { background-color: #EA0000; }
+th .ee_spcl_cont        { background-color: #EA0000; }
+th .se_spcl_cont        { background-color: #EA0000; }
+th .sol_spcl_cont       { background-color: #EA0000; }
+th .lix_spcl_cont       { background-color: #EA0000; }
+th .win_spcl_cont       { background-color: #EA0000; }
+th .isee_spcl_cont      { background-color: #EA0000; }
+th .iswje_spcl_cont     { background-color: #EA0000; }
+th .issje_spcl_cont     { background-color: #EA0000; }
+th .fj_spcl_cont        { background-color: #EA0000; }
 .em     { font-weight: bold }
 th .em  { font-weight: normal; }
 dt *    { font-weight: normal; }
@@ -216,7 +218,7 @@ dt *    { font-weight: normal; }
 .sup    { font-size: 60%; vertical-align: super; }
 .sub    { font-size: 60%; vertical-align: sub; }
 .blue   { color: #4A89AA; }
-.red    { color: A4312E; background-color: #FFFFCC;}
+.red    { color: EA0000; background-color: #FFFFCC;}
 .supple { margin-left: 27px; }
 .body-message      { margin-bottom: 10px; }
 .body-message + h3 { margin-bottom:  0px !important; }
