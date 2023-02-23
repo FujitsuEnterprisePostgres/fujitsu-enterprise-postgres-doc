@@ -1,0 +1,512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META CONTENT="4.3" NAME="GeneratorVersion">
+<title>Enterprise Postgres 13 Operation Guide</title><link rel="stylesheet" href="ix.css" type="TEXT/CSS"><base target="mainFrame"></head><body class="ix2">
+<div class="ix_label"><a class="ix_komoku" name="A">[A]</a></div>
+<div class="ix_entry">Actions in Response to Instance Startup Failure</div>
+<div class="ix_target">
+<a href="b1439-00-15-10-00.html#N97G">15.10 Actions in Response to Instance Startup Failure</a><br>
+</div>
+<div class="ix_entry">All user data within the specified tablespace</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N31G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">Approximate backup time</div>
+<div class="ix_target">
+<a href="b1439-00-03-00-00.html#N18G">Chapter&nbsp;3 Backing Up the Database</a><br>
+</div>
+<div class="ix_entry">Approximate recovery time</div>
+<div class="ix_target">
+<a href="b1439-00-15-00-00.html#N91G">Chapter&nbsp;15 Actions when an Error Occurs</a><br>
+</div>
+<div class="ix_entry">Automatically opening the keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-10-02.html#N52G">5.10.2 Database Multiplexing Mode</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="B">[B]</a></div>
+<div class="ix_entry">Backing Up and Recovering the Keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-06-04.html#N43G">5.6.4 Backing Up and Recovering the Keystore</a><br>
+</div>
+<div class="ix_entry">Backing Up and Restoring/Recovering the Database</div>
+<div class="ix_target">
+<a href="b1439-00-05-07-00.html#N44G">5.7 Backing Up and Restoring/Recovering the Database</a><br>
+</div>
+<div class="ix_entry">backup_destination (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N106G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">Backup/Recovery Using the Copy Command</div>
+<div class="ix_target">
+<a href="b1439-00-14-00-00.html#N75G">Chapter&nbsp;14 Backup/Recovery Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">Backup and recovery using the pgx_dmpall and pgx_rcvall commands</div>
+<div class="ix_target">
+<a href="b1439-00-05-07-00.html#N45G">5.7 Backing Up and Restoring/Recovering the Database</a><br>
+</div>
+<div class="ix_entry">backup cycle</div>
+<div class="ix_target">
+<a href="b1439-00-03-01-00.html#N20G">3.1 Periodic Backup</a><br>
+</div>
+<div class="ix_entry">Backup data</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N32G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">Backup operation</div>
+<div class="ix_target">
+<a href="b1439-00-03-02-01.html#N21G">3.2.1 Using WebAdmin</a><br>
+</div>
+<div class="ix_entry">Backup operation (file backup)</div>
+<div class="ix_target">
+<a href="b1439-00-03-02-02.html#N23G">3.2.2 Using Server Commands</a><br>
+</div>
+<div class="ix_entry">Backup status</div>
+<div class="ix_target">
+<a href="b1439-00-03-02-01.html#N22G">3.2.1 Using WebAdmin</a><br>
+<a href="b1439-00-03-02-02.html#N24G">3.2.2 Using Server Commands</a><br>
+</div>
+<div class="ix_entry">Backup using the backup information file</div>
+<div class="ix_target">
+<a href="b1439-00-14-01-00.html#N78G">14.1 Configuration of the Copy Command</a><br>
+</div>
+<div class="ix_entry">Backup Using the Copy Command</div>
+<div class="ix_target">
+<a href="b1439-00-14-02-00.html#N81G">14.2 Backup Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">Building and starting a standby server</div>
+<div class="ix_target">
+<a href="b1439-00-05-10-02.html#N53G">5.10.2 Database Multiplexing Mode</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="C">[C]</a></div>
+<div class="ix_entry">Changing a Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-02-02.html#N64G">6.2.2 Changing a Masking Policy</a><br>
+</div>
+<div class="ix_entry">Changing the Keystore Passphrase</div>
+<div class="ix_target">
+<a href="b1439-00-05-06-02.html#N41G">5.6.2 Changing the Keystore Passphrase</a><br>
+</div>
+<div class="ix_entry">Changing the Master Encryption Key</div>
+<div class="ix_target">
+<a href="b1439-00-05-06-01.html#N40G">5.6.1 Changing the Master Encryption Key</a><br>
+</div>
+<div class="ix_entry">Changing the master encryption key and the passphrase</div>
+<div class="ix_target">
+<a href="b1439-00-05-10-02.html#N54G">5.10.2 Database Multiplexing Mode</a><br>
+</div>
+<div class="ix_entry">Checking an Encrypted Tablespace</div>
+<div class="ix_target">
+<a href="b1439-00-05-05-00.html#N38G">5.5 Checking an Encrypted Tablespace</a><br>
+</div>
+<div class="ix_entry">Checking backup status</div>
+<div class="ix_target">
+<a href="b1439-00-14-02-00.html#N84G">14.2 Backup Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">Checking the operating state of an instance</div>
+<div class="ix_target">
+<a href="b1439-00-02-01-03.html#N17G">2.1.2 Using Commands</a><br>
+</div>
+<div class="ix_entry">Checking the operating status of an instance</div>
+<div class="ix_target">
+<a href="b1439-00-02-01-01.html#N10G">2.1.1 Using WebAdmin</a><br>
+</div>
+<div class="ix_entry">Collecting Failure Investigation Data </div>
+<div class="ix_target">
+<a href="b1439-i-00-00.html#N136G">Appendix&nbsp;I Collecting Failure Investigation Data</a><br>
+</div>
+<div class="ix_entry">Configuration of the Copy Command</div>
+<div class="ix_target">
+<a href="b1439-00-14-01-00.html#N76G">14.1 Configuration of the Copy Command</a><br>
+</div>
+<div class="ix_entry">Configuration of the copy command for backup</div>
+<div class="ix_target">
+<a href="b1439-00-14-01-00.html#N79G">14.1 Configuration of the Copy Command</a><br>
+</div>
+<div class="ix_entry">Configuration of the copy command for recovery</div>
+<div class="ix_target">
+<a href="b1439-00-14-01-00.html#N80G">14.1 Configuration of the Copy Command</a><br>
+</div>
+<div class="ix_entry">Confirming a Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-02-03.html#N65G">6.2.3 Confirming a Masking Policy</a><br>
+</div>
+<div class="ix_entry">Continuous archiving and point-in-time recovery</div>
+<div class="ix_target">
+<a href="b1439-00-05-07-00.html#N47G">5.7 Backing Up and Restoring/Recovering the Database</a><br>
+</div>
+<div class="ix_entry">Copy Command for Backup</div>
+<div class="ix_target">
+<a href="b1439-00-14-04-01.html#N89G">14.4.1 Copy Command for Backup</a><br>
+</div>
+<div class="ix_entry">Copy Command for Recovery</div>
+<div class="ix_target">
+<a href="b1439-00-14-04-02.html#N90G">14.4.2 Copy Command for Recovery</a><br>
+</div>
+<div class="ix_entry">Copy Command Interface</div>
+<div class="ix_target">
+<a href="b1439-00-14-04-00.html#N88G">14.4 Copy Command Interface</a><br>
+</div>
+<div class="ix_entry">core_contents (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N99G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">core_directory (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N98G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">Creating a Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-02-01.html#N63G">6.2.1 Creating a Masking Policy</a><br>
+</div>
+<div class="ix_entry">Cyclic usage of the backup area</div>
+<div class="ix_target">
+<a href="b1439-00-14-01-00.html#N77G">14.1 Configuration of the Copy Command</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="D">[D]</a></div>
+<div class="ix_entry">Data Masking</div>
+<div class="ix_target">
+<a href="b1439-00-06-00-00.html#N57G">Chapter&nbsp;6 Data Masking</a><br>
+</div>
+<div class="ix_entry">Data Types for Masking</div>
+<div class="ix_target">
+<a href="b1439-00-06-03-00.html#N68G">6.3 Data Types for Masking</a><br>
+</div>
+<div class="ix_entry">Deleting a Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-02-05.html#N67G">6.2.5 Deleting a Masking Policy</a><br>
+</div>
+<div class="ix_entry">Determining the backup area of the latest backup</div>
+<div class="ix_target">
+<a href="b1439-00-14-03-00.html#N86G">14.3 Recovery Using the Copy Command</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="E">[E]</a></div>
+<div class="ix_entry">Enabling and Disabling a Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-02-04.html#N66G">6.2.4 Enabling and Disabling a Masking Policy</a><br>
+</div>
+<div class="ix_entry">Enabling Automatic Opening of the Keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-06-03.html#N42G">5.6.3 Enabling Automatic Opening of the Keystore</a><br>
+</div>
+<div class="ix_entry">Encrypting a Tablespace</div>
+<div class="ix_target">
+<a href="b1439-00-05-04-00.html#N37G">5.4 Encrypting a Tablespace</a><br>
+</div>
+<div class="ix_entry">Encrypting Existing Data</div>
+<div class="ix_target">
+<a href="b1439-00-05-09-00.html#N49G">5.9 Encrypting Existing Data</a><br>
+</div>
+<div class="ix_entry">Encryption mechanisms</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N26G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">Errors in More Than One Storage Disk</div>
+<div class="ix_target">
+<a href="b1439-00-15-09-00.html#N96G">15.9 Errors in More Than One Storage Disk</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="F">[F]</a></div>
+<div class="ix_entry">Faster encryption and decryption based on hardware</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N29G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">File system level backup and restore</div>
+<div class="ix_target">
+<a href="b1439-00-05-07-00.html#N46G">5.7 Backing Up and Restoring/Recovering the Database</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="H">[H]</a></div>
+<div class="ix_entry">High-Speed Data Load</div>
+<div class="ix_target">
+<a href="b1439-00-11-00-00.html#N74G">Chapter&nbsp;11 High-Speed Data Load</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="I">[I]</a></div>
+<div class="ix_entry">If failure occurred in the data storage disk or the transaction log storage disk</div>
+<div class="ix_target">
+<a href="b1439-00-15-01-01.html#N92G">15.1.1 Using WebAdmin</a><br>
+</div>
+<div class="ix_entry">If failure occurred on the backup data storage disk</div>
+<div class="ix_target">
+<a href="b1439-00-15-01-01.html#N93G">15.1.1 Using WebAdmin</a><br>
+<a href="b1439-00-15-01-02.html#N95G">15.1.2 Using Server Command</a><br>
+</div>
+<div class="ix_entry">If failure occurred on the data storage disk or the transaction log storage directory</div>
+<div class="ix_target">
+<a href="b1439-00-15-01-02.html#N94G">15.1.2 Using Server Command</a><br>
+</div>
+<div class="ix_entry">Importing and Exporting the Database</div>
+<div class="ix_target">
+<a href="b1439-00-05-08-00.html#N48G">5.8 Importing and Exporting the Database</a><br>
+</div>
+<div class="ix_entry">Installing and Operating the In-memory Feature</div>
+<div class="ix_target">
+<a href="b1439-00-09-00-00.html#N72G">Chapter&nbsp;9 Installing and Operating the In-memory Feature</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="K">[K]</a></div>
+<div class="ix_entry">keystore_location (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N100G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="L">[L]</a></div>
+<div class="ix_entry">Logging in to WebAdmin</div>
+<div class="ix_target">
+<a href="b1439-00-01-02-01.html#N2G">1.2.1 Logging in to WebAdmin</a><br>
+</div>
+<div class="ix_entry">log in</div>
+<div class="ix_target">
+<a href="b1439-00-01-02-01.html#N5G">1.2.1 Logging in to WebAdmin</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="M">[M]</a></div>
+<div class="ix_entry">Managing the Keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-06-00.html#N39G">5.6 Managing the Keystore</a><br>
+</div>
+<div class="ix_entry">Masking Condition</div>
+<div class="ix_target">
+<a href="b1439-00-06-01-03.html#N61G">6.1.3 Masking Condition</a><br>
+</div>
+<div class="ix_entry">Masking Format</div>
+<div class="ix_target">
+<a href="b1439-00-06-01-04.html#N62G">6.1.4 Masking Format</a><br>
+</div>
+<div class="ix_entry">Masking Policy</div>
+<div class="ix_target">
+<a href="b1439-00-06-01-00.html#N58G">6.1 Masking Policy</a><br>
+</div>
+<div class="ix_entry">Masking Target</div>
+<div class="ix_target">
+<a href="b1439-00-06-01-01.html#N59G">6.1.1 Masking Target</a><br>
+</div>
+<div class="ix_entry">Masking Type</div>
+<div class="ix_target">
+<a href="b1439-00-06-01-02.html#N60G">6.1.2 Masking Type</a><br>
+</div>
+<div class="ix_entry">Monitoring Database Activity</div>
+<div class="ix_target">
+<a href="b1439-00-07-06-00.html#N70G">7.6 Monitoring Database Activity</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="O">[O]</a></div>
+<div class="ix_entry">Opening the Keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-03-00.html#N36G">5.3 Opening the Keystore</a><br>
+</div>
+<div class="ix_entry">Operating FUJITSU Enterprise Postgres</div>
+<div class="ix_target">
+<a href="b1439-00-01-00-00.html#N1G">Chapter&nbsp;1 Operating FUJITSU Enterprise Postgres</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="P">[P]</a></div>
+<div class="ix_entry">Parallel Query</div>
+<div class="ix_target">
+<a href="b1439-00-10-00-00.html#N73G">Chapter&nbsp;10 Parallel Query</a><br>
+</div>
+<div class="ix_entry">Performing backup</div>
+<div class="ix_target">
+<a href="b1439-00-14-02-00.html#N83G">14.2 Backup Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">Perform recovery</div>
+<div class="ix_target">
+<a href="b1439-00-14-03-00.html#N87G">14.3 Recovery Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">Periodic Backup</div>
+<div class="ix_target">
+<a href="b1439-00-03-01-00.html#N19G">3.1 Periodic Backup</a><br>
+</div>
+<div class="ix_entry">pgx_global_metacache (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N120G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">pgx_stat_gmc view</div>
+<div class="ix_target">
+<a href="b1439-c-06-00.html#N131G">C.6 pgx_stat_gmc</a><br>
+</div>
+<div class="ix_entry">pgx_stat_latch view</div>
+<div class="ix_target">
+<a href="b1439-c-03-00.html#N128G">C.3 pgx_stat_latch</a><br>
+</div>
+<div class="ix_entry">pgx_stat_lwlock view</div>
+<div class="ix_target">
+<a href="b1439-c-02-00.html#N127G">C.2 pgx_stat_lwlock</a><br>
+</div>
+<div class="ix_entry">pgx_stat_sql view</div>
+<div class="ix_target">
+<a href="b1439-c-05-00.html#N130G">C.5 pgx_stat_sql</a><br>
+</div>
+<div class="ix_entry">pgx_stat_walwriter view</div>
+<div class="ix_target">
+<a href="b1439-c-04-00.html#N129G">C.4 pgx_stat_walwriter</a><br>
+</div>
+<div class="ix_entry">pgx_tablespaces</div>
+<div class="ix_target">
+<a href="b1439-c-01-00.html#N126G">C.1 pgx_tablespaces</a><br>
+</div>
+<div class="ix_entry">Placement and automatic opening of the keystore file</div>
+<div class="ix_target">
+<a href="b1439-00-05-10-01.html#N50G">5.10.1 HA Clusters that do not Use Database Multiplexing</a><br>
+</div>
+<div class="ix_entry">Placing the keystore file</div>
+<div class="ix_target">
+<a href="b1439-00-05-10-02.html#N51G">5.10.2 Database Multiplexing Mode</a><br>
+</div>
+<div class="ix_entry">Preparing for backup</div>
+<div class="ix_target">
+<a href="b1439-00-14-02-00.html#N82G">14.2 Backup Using the Copy Command</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="R">[R]</a></div>
+<div class="ix_entry">Recovery Using the Copy Command</div>
+<div class="ix_target">
+<a href="b1439-00-14-03-00.html#N85G">14.3 Recovery Using the Copy Command</a><br>
+</div>
+<div class="ix_entry">reserve_buffer_ratio (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N111G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="S">[S]</a></div>
+<div class="ix_entry">Scope of encryption</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N30G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">search_path (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N107G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">Security Notes</div>
+<div class="ix_target">
+<a href="b1439-00-06-04-00.html#N69G">6.4 Security Notes</a><br>
+</div>
+<div class="ix_entry">Security-Related Notes</div>
+<div class="ix_target">
+<a href="b1439-00-05-11-00.html#N55G">5.11 Security-Related Notes</a><br>
+</div>
+<div class="ix_entry">Setting a restore point</div>
+<div class="ix_target">
+<a href="b1439-00-03-02-02.html#N25G">3.2.2 Using Server Commands</a><br>
+</div>
+<div class="ix_entry">Setting the Master Encryption Key</div>
+<div class="ix_target">
+<a href="b1439-00-05-02-00.html#N35G">5.2 Setting the Master Encryption Key</a><br>
+</div>
+<div class="ix_entry">Starting and Stopping the Web Server Feature of WebAdmin</div>
+<div class="ix_target">
+<a href="b1439-f-00-00.html#N134G">Appendix&nbsp;F Starting and Stopping the Web Server Feature of WebAdmin</a><br>
+</div>
+<div class="ix_entry">Starting an instance</div>
+<div class="ix_target">
+<a href="b1439-00-02-01-01.html#N8G">2.1.1 Using WebAdmin</a><br>
+<a href="b1439-00-02-01-03.html#N15G">2.1.2 Using Commands</a><br>
+</div>
+<div class="ix_entry">Starting pgAdmin</div>
+<div class="ix_target">
+<a href="b1439-00-01-03-00.html#N6G">1.3 Starting pgAdmin</a><br>
+<a href="b1439-00-01-03-01.html#N7G">1.3.1 Starting pgAdmin</a><br>
+</div>
+<div class="ix_entry">Startup URL for WebAdmin</div>
+<div class="ix_target">
+<a href="b1439-00-01-02-01.html#N4G">1.2.1 Logging in to WebAdmin</a><br>
+</div>
+<div class="ix_entry">Stopping an instance</div>
+<div class="ix_target">
+<a href="b1439-00-02-01-01.html#N9G">2.1.1 Using WebAdmin</a><br>
+<a href="b1439-00-02-01-03.html#N16G">2.1.2 Using Commands</a><br>
+</div>
+<div class="ix_entry">Streaming replication support</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N34G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">Streaming Replication Using WebAdmin</div>
+<div class="ix_target">
+<a href="b1439-00-08-00-00.html#N71G">Chapter&nbsp;8 Streaming Replication Using WebAdmin</a><br>
+</div>
+<div class="ix_entry">Strong encryption algorithms</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N28G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">System Administration Functions</div>
+<div class="ix_target">
+<a href="b1439-b-00-00.html#N122G">Appendix&nbsp;B System Administration Functions</a><br>
+</div>
+<div class="ix_entry">System Views</div>
+<div class="ix_target">
+<a href="b1439-c-00-00.html#N125G">Appendix&nbsp;C System Views</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="T">[T]</a></div>
+<div class="ix_entry">tablespace_encryption_algorithm (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N105G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">Tables Used by Data Masking </div>
+<div class="ix_target">
+<a href="b1439-d-00-00.html#N133G">Appendix&nbsp;D Tables Used by Data Masking</a><br>
+</div>
+<div class="ix_entry">Tips for Installing Built Applications</div>
+<div class="ix_target">
+<a href="b1439-00-05-12-00.html#N56G">5.12 Tips for Installing Built Applications</a><br>
+</div>
+<div class="ix_entry">track_gmc (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N121G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">track_sql (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N109G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">track_waits (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N108G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">Transparent Data Encryption Control Functions</div>
+<div class="ix_target">
+<a href="b1439-b-02-00.html#N124G">B.2 Transparent Data Encryption Control Functions</a><br>
+</div>
+<div class="ix_entry">Two-layer encryption key and the keystore</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N27G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="U">[U]</a></div>
+<div class="ix_entry">User environment</div>
+<div class="ix_target">
+<a href="b1439-00-01-02-01.html#N3G">1.2.1 Logging in to WebAdmin</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="V">[V]</a></div>
+<div class="ix_entry">vci.control_max_workers (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N113G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.cost_threshold (numeric)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N112G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.enable (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N114G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.log_query (string)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N115G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.maintenance_work_mem (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N116G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.max_local_ros (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N117G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.max_parallel_degree (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N118G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_entry">vci.shared_work_mem (numerical value)</div>
+<div class="ix_target">
+<a href="b1439-a-00-00.html#N119G">Appendix&nbsp;A Parameters</a><br>
+</div>
+<div class="ix_label"><a class="ix_komoku" name="W">[W]</a></div>
+<div class="ix_entry">WAL and temporary files</div>
+<div class="ix_target">
+<a href="b1439-00-05-01-00.html#N33G">5.1 Protecting Data Using Encryption</a><br>
+</div>
+<div class="ix_entry">WAL Mirroring Control Functions</div>
+<div class="ix_target">
+<a href="b1439-b-01-00.html#N123G">B.1 WAL Mirroring Control Functions</a><br>
+</div>
+<div class="ix_entry">WebAdmin Wallet</div>
+<div class="ix_target">
+<a href="b1439-g-00-00.html#N135G">Appendix&nbsp;G WebAdmin Wallet</a><br>
+</div></body></html>
